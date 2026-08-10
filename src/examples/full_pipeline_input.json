@@ -1,0 +1,60 @@
+{
+  "detectors": {"type": "reference-proxy"},
+  "query": {
+    "event_id": "query-raw-001",
+    "channels": {
+      "pressure": [1.0, 1.1, 1.0, 1.1, 7.5, 8.0, 1.2, 1.1],
+      "temperature": [20.0, 20.1, 20.0, 20.2, 31.0, 33.0, 20.3, 20.1]
+    },
+    "signature": {"subsystem": "reactor-a", "variables": ["pressure", "temperature"]}
+  },
+  "training_normal": [
+    {
+      "event_id": "train-normal-001",
+      "channels": {
+        "pressure": [1.0, 1.1, 1.0, 1.1, 1.0, 1.1, 1.0, 1.1],
+        "temperature": [20.0, 20.1, 20.0, 20.1, 20.0, 20.1, 20.0, 20.1]
+      }
+    },
+    {
+      "event_id": "train-normal-002",
+      "channels": {
+        "pressure": [0.9, 1.0, 1.1, 1.0, 0.9, 1.0, 1.1, 1.0],
+        "temperature": [19.9, 20.0, 20.1, 20.0, 19.9, 20.0, 20.1, 20.0]
+      }
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "case-fault-001",
+      "source_partition": "history",
+      "source_interval": "2025-01-01/2025-01-02",
+      "outcome_channel": "fault",
+      "ranking_signature": {"subsystem": "reactor-a", "variables": ["pressure", "temperature"]},
+      "resolution_text": "Inspect the pressure regulator and thermal control loop.",
+      "version": 1,
+      "created_at": "2026-01-01T00:00:00+00:00",
+      "transform_id": "signature-v1",
+      "model_id": "case-builder-v1"
+    },
+    {
+      "case_id": "case-benign-001",
+      "source_partition": "history",
+      "source_interval": "2025-02-01/2025-02-02",
+      "outcome_channel": "benign",
+      "ranking_signature": {"subsystem": "reactor-a", "variables": ["pressure"]},
+      "resolution_text": "A scheduled set-point transition produced a benign transient.",
+      "version": 1,
+      "created_at": "2026-01-02T00:00:00+00:00",
+      "transform_id": "signature-v1",
+      "model_id": "case-builder-v1"
+    }
+  ],
+  "routing_policy": {
+    "policy_id": "frozen-reference-policy-v1",
+    "benign_threshold": 0.62,
+    "fault_threshold": 0.90
+  },
+  "reader": {"type": "rule"},
+  "retrieval_k": 1
+}

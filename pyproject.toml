@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "auditable-alarm-diagnosis"
+version = "0.2.0"
+description = "End-to-end auditable alarm diagnosis pipeline with pluggable detectors and LLM readers"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Auditable Alarm Diagnosis authors"}]
+dependencies = []
+keywords = [
+    "alarm diagnosis",
+    "anomaly detection",
+    "auditability",
+    "selective classification",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/lplsaiorg/AuditableAlarmDiagnosis_EvidenceRoleSeparation"
+Repository = "https://github.com/lplsaiorg/AuditableAlarmDiagnosis_EvidenceRoleSeparation"
+Issues = "https://github.com/lplsaiorg/AuditableAlarmDiagnosis_EvidenceRoleSeparation/issues"
+
+[project.scripts]
+auditable-alarm = "auditable_alarm.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["examples*", "tests*"]

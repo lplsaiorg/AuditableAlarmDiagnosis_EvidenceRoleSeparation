@@ -1,0 +1,11 @@
+{
+  "epsilon_fb": 0.05,
+  "epsilon_nf": 0.10,
+  "bound_confidence": 0.975,
+  "scores": [0.05, 0.10, 0.18, 0.32, 0.79, 0.84, 0.91, 0.97],
+  "labels": ["NORMAL", "NORMAL", "NORMAL", "NORMAL", "FAULT", "FAULT", "FAULT", "FAULT"],
+  "candidates": [
+    {"policy_id": "wide", "benign_threshold": 0.20, "fault_threshold": 0.80},
+    {"policy_id": "narrow", "benign_threshold": 0.10, "fault_threshold": 0.90}
+  ]
+}
