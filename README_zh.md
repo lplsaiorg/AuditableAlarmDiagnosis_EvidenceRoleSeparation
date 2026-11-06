@@ -4,7 +4,7 @@
 
 ## 可执行证据角色隔离与非对称风险校准
 
-论文：**Auditable Alarm Disposition through Executable Evidence Role Separation and Asymmetric Risk Calibration**  
+论文：**Auditable Alarm Disposition through Executable Evidence Role Separation and Asymmetric Risk Calibration**
 作者：Wu Zhang、Tianwu Lei、Luo Xiao、Yong Yang。研究修订日期：2026 年 11 月 6 日。
 
 工业报警处置需要结合传感器测量、历史案例和语言模型解释。引用有效的当前证据，并不意味着模型的判断不会受误导性历史影响。本项目将数值处置与历史解释分离，并分别校准两类方向性错误。
