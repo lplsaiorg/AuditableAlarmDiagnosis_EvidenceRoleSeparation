@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "auditable-alarm-diagnosis"
 version = "0.2.0"
-description = "End-to-end auditable alarm diagnosis pipeline with pluggable detectors and LLM readers"
+description = "Demonstration interfaces for auditable alarm disposition; benchmark research scripts are distributed separately"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}

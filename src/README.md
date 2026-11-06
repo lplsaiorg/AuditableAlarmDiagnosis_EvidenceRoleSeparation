@@ -1,3 +1,5 @@
+> **Earlier demonstration implementation.** For the revised benchmark method and results, see the [project overview](../README.md) and [research code](../research/README.md).
+
 # Reference source code
 
 This directory is a dependency-free Python reference implementation of the
