@@ -1,3 +1,5 @@
+> Updated research implementation: [research/README.md](research/README.md). The package below is the earlier demonstration.
+
 [English](README.md) | **简体中文**
 
 # 可审计报警诊断

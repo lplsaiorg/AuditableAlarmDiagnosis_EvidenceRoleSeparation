@@ -21,3 +21,15 @@ htmlcov/
 *.safetensors
 dist/
 build/
+
+# Private/generated research artifacts
+research/data/
+research/models/
+research/results/
+research/experiments/
+research/logs/
+research/tmp/
+.secrets/
+*.sqlite3*
+*.joblib
+*.npz

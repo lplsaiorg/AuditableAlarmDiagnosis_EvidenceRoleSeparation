@@ -1,3 +1,5 @@
+> Updated research implementation: [research/README.md](research/README.md). The package below is the earlier demonstration.
+
 **English** | [简体中文](README_zh.md)
 
 # Auditable Alarm Diagnosis
